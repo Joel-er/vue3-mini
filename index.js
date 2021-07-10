@@ -1,10 +1,3 @@
-import { effect, reactive } from "@vue/reactivity";
-let a = reactive({
-  value: 1,
-});
-let b;
-effect(() => {
-  b = a.value + 10;
-  console.log("b", b);
-});
-a.value = 20;
+import App from "./App.js";
+import { createApp } from "./core/index.js";
+createApp(App).mount(document.querySelector("#app"));
