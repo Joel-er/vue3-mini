@@ -26,10 +26,10 @@ export default {
     return h(
       "div",
       {
-        id: "test - 1",
+        id: "test -" + context.state.count,
         class: "el-app",
       },
-      [h("div", {}, "xixixix"), h("div", {}, "hahahha")]
+      [h("div", {}, String(context.state.count)), h("div", {}, "hahahha")]
     );
   },
 };
